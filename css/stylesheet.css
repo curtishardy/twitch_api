@@ -1,0 +1,61 @@
+body {
+  background-color: #151515;
+}
+.row {
+  padding-top: 15px;
+}
+.purple {
+  background-color: #7766cc;
+}
+.grey {
+  background-color: #252525;
+}
+.streamer {
+  font-size: 18px;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  text-align: center;
+}
+.stream-state {
+  font-size: 18px;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #eee;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  text-align: center;
+  z-index: 999;
+}
+.offline {
+  color: #ccc;
+}
+.state-indicator {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 4px solid #cc1122;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  animation: pulsate infinite 1s;
+  z-index: 998;
+}
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}
+.preview-image {
+  width:100%;
+  height:100%;
+  padding-bottom:15px;
+}
