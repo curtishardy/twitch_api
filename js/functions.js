@@ -106,4 +106,23 @@ $(document).ready(function() {
     }
   });
 
+  // Games sorted by most viewers
+  // Yogscast
+  $.ajax({
+    type: "GET",
+    url: "https://api.twitch.tv/kraken/games/top",
+    headers:{
+      'Client-ID': 'nee3a2hfocljtftsntybyb12nm2p0cb'
+    },
+    success: function(data){
+      console.log(data);
+      $.each(data.top, function(i, results){
+        var name = results.game.name;
+        var viewers = results.game.popularity;
+
+        $("#games--container").append('<ul> <li class="games--list">' + name + '<br>' + viewers + '&nbsp; viewers' + '</li> </ul>');
+      })
+    }
+  });
+
 });
